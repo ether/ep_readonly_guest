@@ -1,0 +1,19 @@
+{
+  "parts": [
+    {
+      "name": "ep_readonly_guest",
+      "client_hooks": {
+        "postToolbarInit": "ep_readonly_guest/static/js/client"
+      },
+      "hooks": {
+        "authenticate": "ep_readonly_guest",
+        "clientVars": "ep_readonly_guest",
+        "eejsBlock_userlist": "ep_readonly_guest",
+        "expressCreateServer": "ep_readonly_guest",
+        "handleMessage": "ep_readonly_guest",
+        "loadSettings": "ep_readonly_guest",
+        "preAuthorize": "ep_readonly_guest"
+      }
+    }
+  ]
+}
