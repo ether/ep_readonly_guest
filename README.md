@@ -30,4 +30,4 @@ All settings are optional. The defaults are shown here:
 
 Copyright © 2020 Richard Hansen <rhansen@rhansen.org>
 
-Licensed under the terms of the [Apache 2.0 license](LICENSE).
+Licensed under the [MIT license](LICENSE).
