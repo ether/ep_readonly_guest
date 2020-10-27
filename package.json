@@ -21,5 +21,9 @@
   "homepage": "https://github.com/ether/ep_readonly_guest#readme",
   "dependencies": {
     "cheerio": "^0.22.0"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "http://etherpad.org/"
   }
 }
