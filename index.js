@@ -77,12 +77,22 @@ exports.expressCreateServer = (hookName, {app}) => {
   // the beginning after the session is destroyed. I couldn't find a good way to do that other than
   // to force the user to visit a different URL.
   app.get(endpoint('login'), (req, res, next) => {
-    logger.debug(req.url);
-    // Use a relative URL when redirecting to the 'forceauth' endpoint in case the reverse proxy is
-    // configured to offset the Etherpad paths (e.g., /etherpad/p/foo instead of /p/foo).
-    const epAndQuery = req.url.split('/').slice(-1)[0].split('?');
-    epAndQuery[0] = 'forceauth';
-    req.session.destroy(() => res.redirect(epAndQuery.join('?')));
+    (async () => {
+      logger.debug(req.url);
+      const {user: {username} = {}} = req.session;
+      const {cookies: {token} = {}} = req;
+      if (username === user.username && token) {
+        // Clear the display name so that logged-in users don't show up as "Read-Only Guest".
+        // TODO: author ID might come from session ID, not token.
+        const authorId = await authorManager.getAuthor4Token(token);
+        await authorManager.setAuthorName(authorId, null);
+      }
+      // Use a relative URL when redirecting to the 'forceauth' endpoint in case the reverse proxy
+      // is configured to offset the Etherpad paths (e.g., /etherpad/p/foo instead of /p/foo).
+      const epAndQuery = req.url.split('/').slice(-1)[0].split('?');
+      epAndQuery[0] = 'forceauth';
+      req.session.destroy(() => res.redirect(epAndQuery.join('?')));
+    })().catch(next);
   });
   app.get(endpoint('forceauth'), (req, res, next) => {
     logger.debug(req.url);
@@ -98,17 +108,13 @@ exports.handleMessage = async (hookName, {message, client}) => {
   logger.debug(hookName);
   if (user.displayname == null) return;
   const {user: {username} = {}} = client.client.request.session;
+  if (username !== user.username) return;
   const {type, data: {type: dType} = {}} = message || {};
   if (type === 'CLIENT_READY') {
     // TODO: author ID might come from session ID, not token.
     const authorId = await authorManager.getAuthor4Token(message.token);
-    if (username === user.username) {
-      await authorManager.setAuthorName(authorId, user.displayname);
-    } else if (await authorManager.getAuthorName(authorId) === user.displayname) {
-      // The non-guest user's display name is "Read-Only Guest", so clear it to avoid confusion.
-      await authorManager.setAuthorName(authorId, null);
-    }
-  } else if (username === user.username && type === 'COLLABROOM' && dType === 'USERINFO_UPDATE') {
+    await authorManager.setAuthorName(authorId, user.displayname);
+  } else if (type === 'COLLABROOM' && dType === 'USERINFO_UPDATE') {
     const {userInfo = {}} = message.data;
     userInfo.name = user.displayname;
   }
