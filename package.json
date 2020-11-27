@@ -24,7 +24,7 @@
   },
   "funding": {
     "type": "individual",
-    "url": "http://etherpad.org/"
+    "url": "https://etherpad.org/"
   },
   "devDependencies": {
     "eslint": "^7.14.0",
