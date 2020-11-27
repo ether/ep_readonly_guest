@@ -1,7 +1,5 @@
 'use strict';
 
-/* global exports, require */
-
 const $ = require('cheerio');
 const assert = require('assert').strict;
 const authorManager = require('ep_etherpad-lite/node/db/AuthorManager');
