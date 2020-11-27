@@ -30,7 +30,7 @@ ep\_readonly\_guest settings are optional, with the defaults shown below:
 
 ## Copyright and License
 
-Copyright © 2020 Richard Hansen <rhansen@rhansen.org>
+Copyright © the ep\_reaonly\_guest authors and contributors
 
 Licensed under the [Apache License, Version 2.0](LICENSE) (the "License"); you
 may not use this file except in compliance with the License. You may obtain a
