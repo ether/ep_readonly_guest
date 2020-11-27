@@ -10,15 +10,17 @@ user drop-down list forces the user to authenticate via Etherpad's built-in HTTP
 basic authentication or via an authentication plugin (if one is installed).
 After logging in, the "log in" button becomes a "log out" button.
 
-## Settings
+## Configuration
 
-All settings are optional. The defaults are shown here:
+Etherpad's `requireAuthentication` setting must be `true`. All
+ep\_readonly\_guest settings are optional, with the defaults shown below:
 
 ```json
   "ep_readonly_guest": {
     "guest_username": "guest",
     "guest_displayname": "Read-Only Guest"
   },
+  "requireAuthentication": true,
 ```
 
 * `guest_username` is the username used for the guest account.
