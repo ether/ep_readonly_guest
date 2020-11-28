@@ -12,6 +12,22 @@ let user;
 
 const endpoint = (ep) => `/${encodeURIComponent(pluginName)}/${ep}`;
 
+const makeLogInOutButton = (req) => {
+  const {user: {username} = {}} = req.session;
+  const isGuest = username === user.username;
+  const ep = isGuest ? 'login' : 'logout';
+  const buttonUri = `${endpoint(ep)}?redirect_uri=${encodeURIComponent(req.url)}`;
+  const buttonText = isGuest ? 'Log In' : 'Log Out';
+  return $('<div>')
+      .addClass('btn-container')
+      .append($('<a>')
+          .attr('href', buttonUri)
+          .addClass('btn')
+          .addClass('btn-primary')
+          .attr('data-l10n-id', `${pluginName}_${ep}`)
+          .text(buttonText));
+};
+
 exports.authenticate = (hookName, {req}, cb) => {
   logger.debug(`${hookName} ${req.url}`);
   // If the user is visiting the 'forceauth' endpoint then fall through to the next authenticate
@@ -33,26 +49,11 @@ exports.clientVars = async (hookName, {socket: {client: {request: req}}}) => {
 
 exports.eejsBlock_userlist = (hookName, context) => {
   logger.debug(hookName);
-  const req = context.renderContext.req;
-  const {user: {username} = {}} = req.session;
-  const isGuest = username === user.username;
-  const ep = isGuest ? 'login' : 'logout';
-  const buttonUri = `${endpoint(ep)}?redirect_uri=${encodeURIComponent(req.url)}`;
-  const buttonText = isGuest ? 'Log In' : 'Log Out';
   // Load the HTML into a throwaway div instead of calling $.load() to avoid
   // https://github.com/cheeriojs/cheerio/issues/1031
   const content = $('<div>').html(context.content);
   content.find('#myuser').append(
-      $('<div>')
-          .addClass('btn-container')
-          .css('margin-left', '10px')
-          .append(
-              $('<a>')
-                  .attr('href', buttonUri)
-                  .addClass('btn')
-                  .addClass('btn-primary')
-                  .attr('data-l10n-id', `${pluginName}_${ep}`)
-                  .text(buttonText)));
+      makeLogInOutButton(context.renderContext.req).css('margin-left', '10px'));
   context.content = content.html();
 };
 
