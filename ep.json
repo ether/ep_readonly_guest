@@ -8,6 +8,7 @@
       "hooks": {
         "authenticate": "ep_readonly_guest",
         "clientVars": "ep_readonly_guest",
+        "eejsBlock_permissionDenied": "ep_readonly_guest",
         "eejsBlock_userlist": "ep_readonly_guest",
         "expressCreateServer": "ep_readonly_guest",
         "handleMessage": "ep_readonly_guest",

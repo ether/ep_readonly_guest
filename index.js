@@ -47,6 +47,18 @@ exports.clientVars = async (hookName, {socket: {client: {request: req}}}) => {
   return vars;
 };
 
+exports.eejsBlock_permissionDenied = (hookName, context) => {
+  logger.debug(hookName);
+  // Load the HTML into a throwaway div instead of calling $.load() to avoid
+  // https://github.com/cheeriojs/cheerio/issues/1031
+  const content = $('<div>').html(context.content);
+  content.find('#permissionDenied').prepend(
+      makeLogInOutButton(context.renderContext.req)
+          .css('float', 'right')
+          .css('padding', '10px'));
+  context.content = content.html();
+};
+
 exports.eejsBlock_userlist = (hookName, context) => {
   logger.debug(hookName);
   // Load the HTML into a throwaway div instead of calling $.load() to avoid
