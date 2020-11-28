@@ -31,7 +31,7 @@ exports.clientVars = async (hookName, {socket: {client: {request: req}}}) => {
   return vars;
 };
 
-exports.eejsBlock_userlist = (hookName, context, cb) => {
+exports.eejsBlock_userlist = (hookName, context) => {
   logger.debug(hookName);
   const req = context.renderContext.req;
   const {user: {username} = {}} = req.session;
@@ -52,7 +52,6 @@ exports.eejsBlock_userlist = (hookName, context, cb) => {
                   .attr('data-l10n-id', `${pluginName}_${ep}`)
                   .text(buttonText)));
   context.content = content.html();
-  return cb();
 };
 
 // Note: The expressCreateServer hook is executed after plugins have been loaded, including after
