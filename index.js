@@ -39,6 +39,8 @@ exports.eejsBlock_userlist = (hookName, context) => {
   const ep = isGuest ? 'login' : 'logout';
   const buttonUri = `${endpoint(ep)}?redirect_uri=${encodeURIComponent(req.url)}`;
   const buttonText = isGuest ? 'Log In' : 'Log Out';
+  // Load the HTML into a throwaway div instead of calling $.load() to avoid
+  // https://github.com/cheeriojs/cheerio/issues/1031
   const content = $('<div>').html(context.content);
   content.find('#myuser').append(
       $('<div>')
