@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"ep_readonly_guest_login": "Entra",
+	"ep_readonly_guest_logout": "Esci"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"ep_readonly_guest_login": "Entrar",
+	"ep_readonly_guest_logout": "Sair"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"ep_readonly_guest_login": "Најава",
+	"ep_readonly_guest_logout": "Одјава"
+}

@@ -1,4 +1,7 @@
 {
-  "ep_readonly_guest_login": "Inloggen",
-  "ep_readonly_guest_logout": "Afmelden"
+	"@metadata": {
+		"authors": []
+	},
+	"ep_readonly_guest_login": "Inloggen",
+	"ep_readonly_guest_logout": "Afmelden"
 }
