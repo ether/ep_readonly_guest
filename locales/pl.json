@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"ep_readonly_guest_login": "Zaloguj się",
+	"ep_readonly_guest_logout": "Wyloguj"
+}

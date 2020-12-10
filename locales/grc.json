@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"PastelKos"
+		]
+	},
+	"ep_readonly_guest_login": "Συνδεῖσθαι",
+	"ep_readonly_guest_logout": "Ἐξέρχεσθαι"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pittigrilli"
+		]
+	},
+	"ep_readonly_guest_login": "Einloggen",
+	"ep_readonly_guest_logout": "Ausloggen"
+}

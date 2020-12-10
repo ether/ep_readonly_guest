@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Roovinn"
+		]
+	},
+	"ep_readonly_guest_login": "Войти",
+	"ep_readonly_guest_logout": "Выйти"
+}

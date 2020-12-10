@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guilhelma"
+		]
+	},
+	"ep_readonly_guest_login": "Connectatz-vos",
+	"ep_readonly_guest_logout": "Se desconnectar"
+}

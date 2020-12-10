@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Roovinn"
+		]
+	},
+	"ep_readonly_guest_login": "लॉग इन",
+	"ep_readonly_guest_logout": "प्रस्थान"
+}

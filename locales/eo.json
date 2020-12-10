@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Javiero"
+		]
+	},
+	"ep_readonly_guest_login": "Ensaluti",
+	"ep_readonly_guest_logout": "Elsaluti"
+}
