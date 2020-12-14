@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Izendegi"
+		]
+	},
+	"ep_readonly_guest_login": "Hasi saioa",
+	"ep_readonly_guest_logout": "Itxi saioa"
+}
