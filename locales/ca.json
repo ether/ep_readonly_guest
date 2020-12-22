@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mguix"
+		]
+	},
+	"ep_readonly_guest_login": "Inicia sessió",
+	"ep_readonly_guest_logout": "Finalitza la sessió"
+}

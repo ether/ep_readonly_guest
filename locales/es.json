@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"ep_readonly_guest_login": "Acceder",
+	"ep_readonly_guest_logout": "Salir"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"YaronSh"
+		]
+	},
+	"ep_readonly_guest_login": "כניסה",
+	"ep_readonly_guest_logout": "יציאה"
+}

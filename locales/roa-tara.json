@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"ep_readonly_guest_login": "Tràse",
+	"ep_readonly_guest_logout": "Isse"
+}
