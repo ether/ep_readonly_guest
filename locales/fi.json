@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Maantietäjä"
+		]
+	},
+	"ep_readonly_guest_login": "Kirjaudu sisään",
+	"ep_readonly_guest_logout": "Kirjaudu ulos"
+}
