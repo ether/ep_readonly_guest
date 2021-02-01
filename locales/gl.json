@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ghose"
+		]
+	},
+	"ep_readonly_guest_login": "Conectar",
+	"ep_readonly_guest_logout": "Desconectar"
+}
