@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Spotter"
+		]
+	},
+	"ep_readonly_guest_login": "Přihlásit se",
+	"ep_readonly_guest_logout": "Odhlásit se"
+}
