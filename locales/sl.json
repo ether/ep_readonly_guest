@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"HairyFotr"
+		]
+	},
+	"ep_readonly_guest_login": "Prijava",
+	"ep_readonly_guest_logout": "Odjava"
+}
