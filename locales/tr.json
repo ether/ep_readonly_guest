@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hedda",
 			"MuratTheTurkish"
 		]
 	},
-	"ep_readonly_guest_login": "Oturum Aç",
+	"ep_readonly_guest_login": "Oturum aç",
 	"ep_readonly_guest_logout": "Oturumu Kapat"
 }
