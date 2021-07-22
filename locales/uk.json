@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"DDPAT"
+		]
+	},
+	"ep_readonly_guest_login": "Увійти",
+	"ep_readonly_guest_logout": "Вийти"
+}
