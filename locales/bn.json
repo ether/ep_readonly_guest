@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Greatder"
+		]
+	},
+	"ep_readonly_guest_login": "প্রবেশ",
+	"ep_readonly_guest_logout": "প্রস্থান"
+}
