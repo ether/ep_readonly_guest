@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andibecker"
+		]
+	},
+	"ep_readonly_guest_login": "เข้าสู่ระบบ",
+	"ep_readonly_guest_logout": "ออกจากระบบ"
+}

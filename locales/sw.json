@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andibecker"
+		]
+	},
+	"ep_readonly_guest_login": "Ingia",
+	"ep_readonly_guest_logout": "Toka"
+}
