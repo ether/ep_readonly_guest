@@ -116,10 +116,13 @@ exports.expressCreateServer = (hookName, {app}) => {
   });
 };
 
-exports.handleMessage = async (hookName, {message, client}) => {
+exports.handleMessage = async (hookName, ctx) => {
+  // ctx.client was renamed to ctx.socket in newer versions of Etherpad. Fall back to ctx.client in
+  // case this plugin is installed on an older version of Etherpad.
+  const {message, socket = ctx.client} = ctx;
   logger.debug(hookName);
   if (user.displayname == null) return;
-  const {user: {username} = {}} = client.client.request.session;
+  const {user: {username} = {}} = socket.client.request.session;
   if (username !== user.username) return;
   const {type, data: {type: dType} = {}} = message || {};
   if (type === 'CLIENT_READY') {
