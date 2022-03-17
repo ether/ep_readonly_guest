@@ -1,6 +1,6 @@
 {
   "name": "ep_readonly_guest",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "Etherpad plugin that grants read-only access to users that are not logged in.",
   "main": "index.js",
   "repository": {
