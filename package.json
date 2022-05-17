@@ -1,7 +1,7 @@
 {
   "name": "ep_readonly_guest",
   "version": "1.0.52",
-  "description": "Etherpad plugin that grants read-only access to users that are not logged in.",
+  "description": "DEPRECATED; USE ep_guest INSTEAD. Etherpad plugin that grants read-only access to users that are not logged in.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -10,6 +10,7 @@
   "keywords": [
     "auth",
     "authentication",
+    "deprecated",
     "ep",
     "etherpad",
     "plugin"

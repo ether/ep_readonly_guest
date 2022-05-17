@@ -1,3 +1,5 @@
+# ***DEPRECATED; USE [ep_guest](https://github.com/ether/ep_guest) INSTEAD.***
+
 ![Publish Status](https://github.com/ether/ep_readonly_guest/workflows/Node.js%20Package/badge.svg) ![Backend Tests Status](https://github.com/ether/ep_readonly_guest/workflows/Backend%20tests/badge.svg)
 
 # ep\_readonly\_guest
